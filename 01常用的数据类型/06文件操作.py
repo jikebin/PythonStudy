@@ -25,9 +25,10 @@
 #     f.write("12324432")
 #     f.flush()
 #     f.writelines(["a","b","c"])
+#     f.writelines(["4","5","6"])
 
 #读操作练习 和 光标练习 read readline readlines tell seek 循环遍历
-f = open("test","r+",encoding="utf8")
+# f = open("test","r+",encoding="utf8")
 # print(f.tell())       # 光标是按照字节数计算，utf-8编码中文占三个字节
 # print(f.read(3))      # 从光标处开始读三个字符
 # print(f.tell())
@@ -43,3 +44,4 @@ f = open("test","r+",encoding="utf8")
 #----------------------------------------------
 #截断练习 truncate
 # f.truncate(10) #截取前10个字符，将后面内容全部删除，并且将光标移动到该部分
+
