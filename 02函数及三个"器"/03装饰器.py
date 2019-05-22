@@ -19,51 +19,51 @@
 #---------------------------------------------------------------------------
 #简单装饰
 import time
-# def foo():
-#     print("请稍等...")
-#     time.sleep(2)
-# #定义装饰器，实现计算函数运行时间的功能扩展
-# def show_time(fun):
-#     def inner():
-#         star = time.time()
-#         fun()
-#         end = time.time()
-#         print("运行时间为：",(end - star))
-#     return inner
-# foo = show_time(foo)
-# #测试
-# #foo()
+def foo():
+    print("请稍等...")
+    time.sleep(2)
+#定义装饰器，实现计算函数运行时间的功能扩展
+def show_time(fun):
+    def inner():
+        star = time.time()
+        fun()
+        end = time.time()
+        print("运行时间为：",(end - star))
+    return inner
+foo = show_time(foo)
+#测试
+foo()
 # #----------------------------------------------------------------------------
-# #python优化后的装饰器
-# @show_time
-# def foo2():
-#     print("优化方法...")
-#     time.sleep(1)
-# #测试
-# foo2()
+#python优化后的装饰器
+@show_time
+def foo2():
+    print("优化方法...")
+    time.sleep(1)
+#测试
+foo2()
 #---------------------------------------------------------------
 #一般装饰器：函数带参数，装饰器不带参数
 #定义装饰器：
-# def show_time(func):
-#     def inner(*args): #定义函数参数
-#         star = time.time()
-#         ret = func(*args)
-#         end = time.time()
-#         print("运行时间为：",(end - star))
-#         return ret
-#     return inner
-# #定义函数
-# @show_time
-# def add(*args):
-#     sum1 = 0
-#     for i in args:
-#         sum1 +=i
-#     time.sleep(1)
-#     return sum1
-#
-# #测试
-# value =add(*range(1,10))
-# print(value)
+def show_time(func):
+    def inner(*args): #定义函数参数
+        star = time.time()
+        ret = func(*args)
+        end = time.time()
+        print("运行时间为：",(end - star))
+        return ret
+    return inner
+#定义函数
+@show_time
+def add(*args):
+    sum1 = 0
+    for i in args:
+        sum1 +=i
+    time.sleep(1)
+    return sum1
+
+#测试
+value =add(*range(1,10))
+print(value)
 #---------------------------------------------------------------------------------
 #困难：给装饰器加参数：
 def flag(fl): #装饰器的参数

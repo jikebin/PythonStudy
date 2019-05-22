@@ -40,7 +40,7 @@
 def func(name,age=13):
     print("name=%s"%name)
     print("age=%d"%age)
-# func("小明") # 关键参数必须赋值，默认自参数可选
+# func("小明")    # 关键参数必须赋值，默认自参数可选
 
 # 无命名可变长参数使用，如下：
 def fun1(*args):
@@ -56,9 +56,9 @@ def fun2(**kwargs):
     print("kwargs = ",kwargs)
     for key in kwargs:
         print("key=%s --- value=%s"%(key,kwargs[key]))
-# fun2({"a":"A","b":"B"})   # 报错
-# fun2(key1=1,key2=2)       # kwargs =  {'key2': 2, 'key1': 1}
-# fun2(**{"a":"A","b":"B"}) # kwargs =  {'b': 'B', 'a': 'A'}
+fun2({"a":"A","b":"B"})   # 报错
+fun2(key1=1,key2=2)       # kwargs =  {'key2': 2, 'key1': 1}
+fun2(**{"a":"A","b":"B"}) # kwargs =  {'b': 'B', 'a': 'A'}
 
 # 在内部作用域中，修改全局作用域内容
 count = 10
