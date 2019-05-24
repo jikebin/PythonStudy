@@ -39,13 +39,13 @@ import logging
 # fh = logging.FileHandler("test.log")
 # sh = logging.StreamHandler()
 # formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-#
+
 # fh.setFormatter(formatter)
 # sh.setFormatter(formatter)
-#
+
 # logger.addHandler(fh)
 # logger.addHandler(sh)
-#
+
 # logger.debug("hehe1")
 # logger.info("hehe2")
 # logger.warning("hh3")

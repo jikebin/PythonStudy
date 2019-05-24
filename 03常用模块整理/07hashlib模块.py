@@ -12,8 +12,8 @@
     3.value = m.hexdigest() #获取加密后数据
 '''
 import hashlib
-#m = hashlib.md5()
-m = hashlib.sha256()
+m = hashlib.md5()
+#m = hashlib.sha256()
 m.update("你好".encode("utf8"))
 #print(m.hexdigest())
 value = m.hexdigest()

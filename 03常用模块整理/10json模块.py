@@ -18,7 +18,7 @@ dict1 = {"key1":"value1"}
 #     f.write(date1)
 #     f.write("\n")
 #     f.write(date2)
-#读操作
+# #读操作
 # f = open("json.txt","r")
 # date1 = f.readline()
 # date2 = f.readline()
@@ -26,12 +26,12 @@ dict1 = {"key1":"value1"}
 # dict2 = json.loads(date2)
 # print(type(list2),type(dict2))
 #----------------------------------------------------------
-date1 = pickle.dumps(list1)
-date2 = pickle.dumps(dict1)
+# date1 = pickle.dumps(list1)
+# date2 = pickle.dumps(dict1)
 # print(date1,date2)
 # print(type(date1),type(date2))
 # with open("pickle.txt","wb") as f:
 #     f.write(date1)
-f = open("pickle.txt","rb")
-value = pickle.loads(f.read())
-print(value)
+# f = open("pickle.txt","rb")
+# value = pickle.loads(f.read())
+# print(value)

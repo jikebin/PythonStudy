@@ -26,10 +26,10 @@ os模块：
 '''
 import os
 #路径操作测试：
-# print(os.getcwd())
-# print(os.sep)
-# print(os.path.abspath("demo.py"))
-# print(os.path.split("C:\\Users\\yutong\\PycharmProjects\\untitled\\模块整理\\demo.py"))
-#print(os.path.dirname("C:\\Users\\yutong\\PycharmProjects\\untitled\\模块整理\\demo.py"))
+print(os.getcwd())
+print(os.sep)
+print(os.path.abspath("demo.py"))
+print(os.path.split("C:\\Users\\yutong\\PycharmProjects\\untitled\\模块整理\\demo.py"))
+print(os.path.dirname("C:\\Users\\yutong\\PycharmProjects\\untitled\\模块整理\\demo.py"))
 print(__file__)
 print(os.path.join("test.txt",*["user","name","path"]))

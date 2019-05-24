@@ -13,9 +13,9 @@
 '''
 import random
 #随机数
-# print(random.random())      #[0,1]
-# print(random.randint(1,2))  #[1,2]
-# print(random.randrange(1,2)) #不包括2
+print(random.random())      #[0,1]
+print(random.randint(1,2))  #[1,2]
+print(random.randrange(1,2)) #不包括2
 #随机序列
 print(random.choice("asddfghjkl"))
 #随机多个序列
