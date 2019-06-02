@@ -33,8 +33,8 @@
 #         print("初始化第一步：__call__")
 #         obj = self.__new__(self, *args, **kwargs)
 #         self.__init__(obj)
-#
-#
+
+
 # class demo(object,metaclass=My_Type):
 #     def __init__(self):
 #         print("完成初始化")
@@ -43,7 +43,7 @@
 #         return object.__new__(cls, *args, **kwargs)
 #     def __add__(self, other):
 #         pass
-#
+
 # d = demo()
 #------------------------------------------------------------------------------------
 # __dict__()

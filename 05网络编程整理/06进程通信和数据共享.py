@@ -62,6 +62,7 @@ if __name__ == '__main__':
         print(d)
 ----------------------------------------------------------------------------------------------------------------------
 '''
+# 进程通信
 from multiprocessing import Process,Queue,Manager
 import os,time
 # def demo(name):
@@ -70,8 +71,8 @@ import os,time
 #     print(name)
 # if __name__ == '__main__':
 #     print("start")
-#     p1 = Process(target=demo,args=("线程1",))
-#     p2 = Process(target=demo,args=("线程2",))
+#     p1 = Process(target=demo,args=("进程1",))
+#     p2 = Process(target=demo,args=("进程2",))
 #     p1.start()
 #     p2.start()
 #     p1.join()
@@ -81,15 +82,15 @@ import os,time
 #     def __init__(self,q):
 #         Process.__init__(self)
 #         self.q = q
-#
+
 #     def run(self):
 #         print("Test")
 #         self.q.put("你好")
-#
+
 # #创建进程
 # if __name__ == '__main__':
 #     queue1 = Queue()
-#
+
 #     p = TestPro(queue1)
 #     p.start()
 #     print(queue1.get())

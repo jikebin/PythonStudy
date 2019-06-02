@@ -21,17 +21,18 @@
 多线程网络通信：socketserver
 该模块是面向对象的
 '''
-# import socketserver
-#
-# class MySocket(socketserver.BaseRequestHandler):
-#
-#     def handle(self):
-#         client_sk = self.request
-#         client_sk.send(bytes("连接成功","utf8"))
-#         while True:
-#             #定义回传信息
-#             date = client_sk.recv(1024)
-#             client_sk.send(date)
-# #创建多线程对象
-# server_obj = socketserver.ThreadingTCPServer(("127.0.0.1",8011),MySocket)
-# server_obj.serve_forever()
+#多线程网络通信：服务器端
+import socketserver
+
+class MySocket(socketserver.BaseRequestHandler):
+
+    def handle(self):
+        client_sk = self.request
+        client_sk.send(bytes("连接成功","utf8"))
+        while True:
+            #定义回传信息
+            date = client_sk.recv(1024)
+            client_sk.send(date)
+#创建多线程对象
+server_obj = socketserver.ThreadingTCPServer(("127.0.0.1",8011),MySocket)
+server_obj.serve_forever()

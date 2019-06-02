@@ -15,13 +15,13 @@ socket通信步骤：
         close()
 Server下的方法：
     socket()        #相关参数：family=AF_INET(ipv4)/AF_INET6(ipv6)/AF_UNIX(nuix进程间通信)
-                               type=SOCK_STREAM(TCP)/SOCK_Dgram(UDP)
+                                type=SOCK_STREAM(TCP)/SOCK_Dgram(UDP)
     bind()          #相关参数：address=(ip地址,端口号)
     listen(5)       #相关说明：定义最大等待数量
     accept()        #相关说明：建立连接阻塞，等待客户端连接，并获取客户端socket对象
 Client下的方法：
     socket()        #相关参数：family=AF_INET(ipv4)/AF_INET6(ipv6)/AF_UNIX(nuix进程间通信)
-                               type=SOCK_STREAM(TCP)/SOCK_Dgram(UDP)
+                                type=SOCK_STREAM(TCP)/SOCK_Dgram(UDP)
     connect()       #相关参数：address=(ip地址，端口号)  ip地址为：str     端口号为：int
 --------------------------------------------------------------------------------------------------------------------
 远程执行命令思想:

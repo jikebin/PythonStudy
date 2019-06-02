@@ -28,6 +28,7 @@ print(Demo.get_Demo())
 print(Demo.get_Demo())
 print(Demo.get_Demo())
 '''
+#。。。。
 class Demo:
     __sing = None
 

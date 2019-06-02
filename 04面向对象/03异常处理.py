@@ -29,7 +29,7 @@ class MyExcept(Exception):
     def __str__(self):
         return self.msg
 try:
-    #raise MyExcept("强制触发异常...")
+    raise MyExcept("强制触发异常...")
     assert 1 == 1        #定制断言
 
 except MyExcept as e:
