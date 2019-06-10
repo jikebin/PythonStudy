@@ -4,17 +4,18 @@
 -------------------------------------------------------------------------------------------------------------------
 urllib包：
     - request 模块
-        - Request(url,data,head)
+        - Request(url,data,headers)
             - 参数：
                 url:    地址
-                data:   字典形式的 form表单数据，通过parse.urlencode(data字典).encode('utf-8')后的参数
-                head:   设置User-Agent隐藏爬虫，字典格式
+                headers:   设置User-Agent隐藏爬虫，字典格式,可以设置各种请求头信息
+                data:   字典形式的 form表单数据，通过parse.urlencode(data字典).encode('utf-8')后的参数(如果在这里设置data,在urlopen中就可以不用设置，注意这里是字节类型数据)
+                
             - 返回值：req
                 req,直接传递给 urlopen(req), 即可
         - urlopen(url,data=None)
             - 参数：
                 url:可以传递字符串形式的地址，或者Request封装后的地址
-                data:默认为None,不传递则按照get提交，否则按照post提交
+                data:默认为None,不传递则按照get提交，否则按照post提交(data是字节类型数据)
             - 返回值：response
                 response.read()         # 读取二进制形式的，网页信息
                 response.geturl()       #返回地址
@@ -36,9 +37,14 @@ urllib包：
               request.install_opener(opener)
               request.urlopen(url) #最终实现代理
           - 返回值：None
+    - urlretrieve(url,filename)     # 直接将地址信息以二进制形式保存到文件中，适合下载图片    
 
     - parse 模块
-        - urlencode(dict类型).encode('utf-8')     #将字典类型表单编码
+        - urlencode(dict类型)                     # 将字典类型拼接成 key=value&...可以直接拼接到url中
+        - quote(url)                              # 将url地址编码
+        - unquote(url)                            # 将url地址解码
+    补充说明：在url中无法直接传递除：数字、字母和下划线以外的其它数据。需要将内容进行编码后才能传递
+    
 -------------------------------------------------------------------------------------------------------------------
 代理步骤：
   1.参数是一个字典{'类型':'代理ip:端口号'}
