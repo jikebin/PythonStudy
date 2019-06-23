@@ -36,7 +36,7 @@ dic = {"一":"斗","二":"瑞",3:"咪",4:"发",5:"嗖",6:"啦",7:"西"}
 # for i in dic.keys():              # 遍历所有的 key
 #     print(i)
 
-# for i in dic.items():             # 遍历说有的键值对，元组形式：(key,value)
-#     print(i)
+# for k,v in dic.items():             # 遍历说有的键值对，元组形式：(key,value)
+#     print(k+"---"+v)
 
 

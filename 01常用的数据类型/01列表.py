@@ -41,5 +41,5 @@ li = [2,4,5,6,7,2,1,3,1]
 # print(type(li) is list) # 判断 li 是否是 list 数据类型
 # print(1 in li)          # 判断 1 是否在 li 列表中
 
-print(li,end = " ")   #补充，print()在 python3中会自动换行，如果不需要自动换行则 print(内容部分 , end = "") 即可
+#print(li,end = " ")   #补充，print()在 python3中会自动换行，如果不需要自动换行则 print(内容部分 , end = "") 即可
 
